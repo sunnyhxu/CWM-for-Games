@@ -1,0 +1,96 @@
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.tmp
+*.swp
+*.swo
+.env
+.venv
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# ---------------------------
+# Jupyter Notebooks
+# ---------------------------
+.ipynb_checkpoints/
+
+# ---------------------------
+# OpenSpiel
+# ---------------------------
+open_spiel/build/
+open_spiel/.bazel*
+*.so
+*.dll
+*.dylib
+
+# ---------------------------
+# Virtualenv / Conda
+# ---------------------------
+.conda/
+*.conda
+*.yaml
+*.yml
+cwm/
+
+# ---------------------------
+# Cache
+# ---------------------------
+.cache/
+__cache__/
+*.log
+logs/
+*.out
+
+# ---------------------------
+# LLM-Generated Code / Temp
+# ---------------------------
+generated/
+sandbox/
+tmp/
+scratch/
+*.exec.py
+*.generated.py
+
+# ---------------------------
+# Credentials / Security
+# ---------------------------
+*.key
+*.pem
+*.crt
+credentials.json
+secret.txt
+api_key.txt
+openai_api_key.txt
+
+# Passwords or tokens (manually added)
+*.token
+*.secret
+
+# ---------------------------
+# OS Specific
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# Editor / IDE
+# ---------------------------
+.vscode/
+.idea/
+*.iml
+
+# ---------------------------
+# Project-specific
+# ---------------------------
+results/
+checkpoints/
+output/
