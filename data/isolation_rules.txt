@@ -1,0 +1,22 @@
+Rules of Isolation
+
+Setup:
+- The game is played on a 1-dimensional line of 13 squares (indexed 0 to 12).
+- The board starts completely empty.
+- Two players (Player 0 and Player 1) alternate turns, starting with Player 0.
+
+Objective:
+- The goal is to be the last player to make a valid move.
+- If a player cannot make a move on their turn, they lose.
+
+Movement:
+- A player can claim any unoccupied square on the board, PROVIDED that the square is not adjacent to any square that has already been claimed (by either player).
+- Once a square is claimed, it remains claimed for the rest of the game.
+
+Constraints:
+- You cannot claim a square `i` if `i` is already taken.
+- You cannot claim a square `i` if `i-1` is taken (if `i-1` exists).
+- You cannot claim a square `i` if `i+1` is taken (if `i+1` exists).
+
+Notation:
+- Actions are simple integers representing the index of the square to claim (e.g., '0', '5', '12').

@@ -30,7 +30,7 @@ def setup_logging():
     )
     print(f"Logging enabled. Check file: {log_filename}")
 
-def run_pipeline(game_name="tic_tac_toe"):
+def run_pipeline(game_name, info_type="perfect"):
     setup_logging()
     
     rules_path = f"data/{game_name}_rules.txt"
@@ -46,9 +46,10 @@ def run_pipeline(game_name="tic_tac_toe"):
 
     # 1. Run Synthesis Pipeline
     cwm_code = synthesizer.synthesize(
-        game_name="Tic-Tac-Toe",
+        game_name=game_name,
         rules=rules,
-        tests=tests
+        tests=tests,
+        info_type=info_type
     )
 
     if not cwm_code:
@@ -62,4 +63,6 @@ def run_pipeline(game_name="tic_tac_toe"):
     logging.info("--- Pipeline Complete ---")
 
 if __name__ == "__main__":
-    run_pipeline()
+    game_to_run = "kuhn_poker"  # Options: "breakthrough", "isolation", "kuhn_poker", "tic_tac_toe"
+    info_type = "imperfect"  # Set to "imperfect" for imperfect-information games
+    run_pipeline(game_to_run, info_type)

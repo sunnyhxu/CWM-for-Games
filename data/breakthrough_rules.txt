@@ -1,0 +1,25 @@
+Rules of Breakthrough
+
+Setup: The game is played on a 5x5 grid. 
+- Player 0 (White) starts with pieces filling the top two rows (Rows 0 and 1).
+- Player 1 (Black) starts with pieces filling the bottom two rows (Rows 3 and 4).
+- Row 2 starts empty.
+
+Objective: The goal is to be the first player to reach the opponent's back rank.
+- Player 0 wins if any of their pieces reach Row 4.
+- Player 1 wins if any of their pieces reach Row 0.
+
+Movement:
+Players alternate turns, starting with Player 0. A piece may move one square forward (straight or diagonal) according to these rules:
+1. Move Straight: A piece can move one square directly forward into an empty square. It cannot move straight if the square is occupied (by friend or foe).
+2. Capture Diagonal: A piece can move one square diagonally forward into a square occupied by an opponent's piece. The opponent's piece is removed (captured).
+3. A piece cannot move into a square occupied by a friendly piece.
+4. Pieces can never move backward or sideways.
+
+Directions:
+- Player 0 moves "Down" (Row index increases: +1).
+- Player 1 moves "Up" (Row index decreases: -1).
+
+Notation:
+Actions are strings in the format 'src_row,src_col->dst_row,dst_col'.
+Example: '1,2->2,2' means moving the piece at Row 1, Column 2 to Row 2, Column 2.
